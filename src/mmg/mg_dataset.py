@@ -1,4 +1,4 @@
-# multimodal_glaucoma_dataset.py
+# mg_dataset.py
 
 import os
 import csv

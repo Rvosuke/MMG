@@ -45,7 +45,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from typing import Optional
 from src.mmg.backbone import SENet
-from src.mmg.attention_cnn_layer import attention_cnn
+from src.mmg.senet import attention_cnn
 
 
 class ResidualBlock(nn.Module):
