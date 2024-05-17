@@ -1,5 +1,10 @@
-torch~=2.2.2+cu121
-numpy~=1.26.3
-pillow~=10.2.0
-torchvision~=0.17.2+cu121
-tqdm~=4.66.2
+torch>=2.2.2+cu121
+numpy>=1.26.3
+pillow>=10.2.0
+torchvision>=0.17.2+cu121
+joblib>=1.4.2
+pandas>=2.2.2
+scikit-learn>=1.4.2
+matplotlib>=3.9.0
+tqdm>=4.66.2
+scikit-optimize>=0.8.1
