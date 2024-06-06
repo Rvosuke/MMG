@@ -40,10 +40,11 @@ Freeze-Missing-VF网络结构和处理逻辑
    - 可以使用更大的数据集和更深的网络结构,以提高模型的性能和泛化能力。
 """
 
+from typing import Optional
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from typing import Optional
 from src.mmg.backbone import SENet
 
 

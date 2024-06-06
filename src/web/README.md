@@ -22,7 +22,7 @@ pip install xgboost joblib gradio
 2. 运行`main.py`文件以启动Gradio应用：
 
 ```bash
-python main.py
+python setup.py
 ```
 
 3. 在Gradio应用中输入患者的特征，点击"Submit"按钮获取预测结果。
