@@ -64,11 +64,17 @@
         <div class="main-container">
             <h2 class="page-title">青光眼诊断系统</h2>
             <el-form :model="form" ref="form" label-width="80px" class="input-form">
-                <el-form-item label="视力">
-                    <el-input v-model="form.vision" placeholder="请输入视力"></el-input>
+                <el-form-item label="性别">
+                    <el-radio-group v-model="form.gender">
+                        <el-radio label="male">男</el-radio>
+                        <el-radio label="female">女</el-radio>
+                    </el-radio-group>
                 </el-form-item>
                 <el-form-item label="年龄">
                     <el-input-number v-model="form.age" :min="0" :max="150"></el-input-number>
+                </el-form-item>
+                <el-form-item label="视力">
+                    <el-input v-model="form.vision" placeholder="请输入视力"></el-input>
                 </el-form-item>
                 <el-form-item label="眼压">
                     <el-input v-model="form.eyePressure" placeholder="请输入眼压"></el-input>
@@ -105,8 +111,9 @@
             data() {
                 return {
                     form: {
-                        vision: '',
+                        gender: '',
                         age: 30,
+                        vision: '',
                         eyePressure: '',
                         images: []
                     },
@@ -149,7 +156,7 @@
                 submitForm() {
                     // 这里应该是发送数据到后端的逻辑
                     // 为了演示，我们使用模拟的响应
-                    this.diagnosisResult = "基于您提供的信息，初步诊断结果显示您可能患有早期青光眼。您的眼压略高于正常范围，视力也有轻微下降。建议您尽快进行进一步的专业检查，以确认诊断并及时开始治疗。";
+                    this.diagnosisResult = `基于您提供的信息（${this.form.gender === 'male' ? '男性' : '女性'}，${this.form.age}岁），初步诊断结果显示您可能患有早期青光眼。您的眼压略高于正常范围，视力也有轻微下降。建议您尽快进行进一步的专业检查，以确认诊断并及时开始治疗。`;
                     this.recommendation = `
 ##推荐医院
 **湘雅医院**眼科是湖南省最早成立的眼科，也是国内著名的眼科专科。在青光眼的诊治方面，湘雅眼科具有丰富的经验和雄厚的实力，在国内处于领先水平。
